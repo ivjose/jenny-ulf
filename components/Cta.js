@@ -26,7 +26,7 @@ const Cta = ({ blok }) => {
         className=" max-w-[300px] md:max-w-md mx-auto"
         variants={contentAnimate}
       >
-        <Leaves color="white" />
+        <Leaves light />
       </motion.div>
       <motion.h2
         {...storyblokEditable(blok)}

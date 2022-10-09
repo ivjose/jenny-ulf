@@ -1,7 +1,7 @@
-const Leaves = ({ color, ...props}) => {
+const Leaves = ({ light, ...props}) => {
   return (
     <svg
-     className={`w-full max-w-xl md:max-w-2xl h-auto px-6 mx-auto fill-${color || `[#004f88]`}`}
+     className={`w-full max-w-xl md:max-w-2xl h-auto px-6 mx-auto  ${light ? `fill-white` : `fill-[#004f88]`}`}
       xmlns="http://www.w3.org/2000/svg"
       width={1706.667}
       height={853.333}
