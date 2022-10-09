@@ -5,3 +5,9 @@
 .custom-font {
     font-family: 'Fleur De Leah', cursive;
 }
+
+html {
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
