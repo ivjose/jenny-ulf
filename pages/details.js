@@ -4,21 +4,9 @@ import {
   getStoryblokApi,
   StoryblokComponent,
 } from "@storyblok/react";
-import Router, { useRouter } from "next/router";
-import { useEffect } from "react";
 
 export default function Home({ story }) {
   story = useStoryblokState(story);
-  const routes = useRouter();
-
-  useEffect(() => {
-    console.log(routes.query, "EFAFECT!!ASDASD");
-
-    // if (routes.query) {
-    //   Router.push()
-    // }
-  }, [routes.query]);
-
   return (
     <div>
       <Head>
