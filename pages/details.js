@@ -10,7 +10,7 @@ export default function Home({ story }) {
   return (
     <div>
       <Head>
-        <title>Jennie and Ulf</title>
+        <title>Jennie-Lynn D. Santos and Ulf Liersch</title>
         <meta
           content="Are getting married on Nov 11, 2022 @ 2PM"
           name="description"
