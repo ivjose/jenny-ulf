@@ -26,7 +26,7 @@ import { useRouter } from "next/router";
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence  mode='wait'>
       <motion.div
         key={router.route}
         initial="initialState"

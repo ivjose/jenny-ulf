@@ -4,9 +4,20 @@ import {
   getStoryblokApi,
   StoryblokComponent,
 } from "@storyblok/react";
+import Router, { useRouter } from "next/router";
+import { useEffect } from "react";
 
 export default function Home({ story }) {
   story = useStoryblokState(story);
+  const routes = useRouter();
+
+  useEffect(() => {
+    console.log(routes.query, "EFAFECT!!ASDASD");
+
+    // if (routes.query) {
+    //   Router.push()
+    // }
+  }, [routes.query]);
 
   return (
     <div>
@@ -19,10 +30,7 @@ export default function Home({ story }) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
-        <meta
-          property="og:image"
-          content="/jennie-and-ulf.jpg"
-        />
+        <meta property="og:image" content="/jennie-and-ulf.jpg" />
 
         <meta property="og:title" content="Jennie and Ulf" />
 

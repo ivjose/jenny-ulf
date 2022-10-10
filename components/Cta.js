@@ -13,7 +13,7 @@ const contentAnimate = {
 };
 
 const Cta = ({ blok }) => {
-  console.log(blok, "CTA!!");
+
   return (
     <motion.div
       initial={"offscreen"}
@@ -38,8 +38,23 @@ const Cta = ({ blok }) => {
       <motion.span variants={contentAnimate}>
         <a
           href={`mailto:${blok?.email}`}
-          className="inline-flex items-center rounded-full border border-transparent bg-white text-cyan-800 px-12 py-6 text-2xl font-medium shadow-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-[#004f88] focus:ring-offset-2"
+          className="inline-flex items-center rounded-full border border-transparent bg-white text-cyan-800 px-12 py-3 text-xl font-medium shadow-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-[#004f88] focus:ring-offset-2"
         >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="w-6 h-6 mr-2"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+            />
+          </svg>
+
           {blok?.email}
         </a>
       </motion.span>
