@@ -3,13 +3,14 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const textAnimate = {
-  offscreen: { opacity: 0 },
-  onscreen: {
-    opacity: 1,
-    // transition: { type: "spring", bounce: 0.4, duration: 1 },
-  },
-};
-
+    offscreen: { y: 100, opacity: 0, scale: 0 },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: { type: "spring", bounce: 0.4, duration: 1 },
+    },
+  };
 export default function ErrorPage() {
   return (
     <div>
@@ -42,9 +43,7 @@ export default function ErrorPage() {
         transition={{ staggerChildren: 0.5 }}
         className="bg-[#004f88] flex flex-col w-full justify-center items-center h-screen"
       >
-        <div    className="w-6 h-6">
-          
-        </div>
+     
         <motion.h2
           variants={textAnimate}
           className="inline-flex items-center  italic -mt-2 md:-mt-8 text-center text-xl font-medium text-white mb-8 md:mb-12 md:text-2xl"
