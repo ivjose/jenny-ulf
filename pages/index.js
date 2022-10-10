@@ -62,7 +62,7 @@ export default function Home() {
               ref={inputField}
               type="text"
               id="floating_standard"
-              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-white appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-sky-300 peer"
+              className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-white appearance-none dark:text-white focus:outline-none focus:ring-0 focus:border-sky-300 peer placeholder-white"
               placeholder=" "
               onChange={(event) => {
                 if (event.target.value && error) {
@@ -84,14 +84,13 @@ export default function Home() {
             )}
           </div>
           <motion.span variants={textAnimate}>
-            {/* <Link href="/details"> */}
             <button
               type="submit"
               className="inline-flex items-center rounded-full border border-transparent bg-white text-cyan-800 px-12 py-3 text-xl font-medium shadow-sm hover:bg-sky-300 focus:outline-none focus:ring-2 focus:ring-[#004f88] focus:ring-offset-2"
             >
               Submit
             </button>
-            {/* </Link> */}
+       
           </motion.span>
         </form>
       </motion.div>

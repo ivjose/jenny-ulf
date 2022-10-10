@@ -1,8 +1,11 @@
 import { storyblokEditable } from "@storyblok/react";
 
 import { motion } from "framer-motion";
+import dayjs from 'dayjs'
+
 import Leaves from "./Leaves";
 import ArrowDown from './ArrowDown'
+
 
 const textAnimate = {
   offscreen: { y: 100, opacity: 0 },
@@ -15,16 +18,10 @@ const textAnimate = {
 
 const HeroBanner = ({ blok }) => {
   const newDate = new Date(blok.date);
-  const time = newDate.toLocaleString("en-US", {
-    hour: "numeric",
-    hour12: true,
-  });
-  const date = newDate.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
+  const time = dayjs(blok.date).format('h:mm A');
+  const date = dayjs(blok.date).format('MMM D, YYYY')
 
+  console.log(dayjs(blok.date).format('h:mm a'), 'asdfdf');
   return (
     <motion.section
       initial={"offscreen"}
